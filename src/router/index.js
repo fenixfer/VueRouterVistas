@@ -10,11 +10,22 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+  },
+  //TODO: Integrando la primer vista
+  {
+    path: '/blog',
+    name: 'Blog',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Blog.vue')
+  },
+  {
+    //id debe de hace dinámico para diferentes artículos
+    //Para hacerlo dinámico ponemos los :
+    path: '/blog/:id/articulo',
+    name: 'Articulo',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Articulo.vue')
+  } 
+
 ]
 
 const router = createRouter({

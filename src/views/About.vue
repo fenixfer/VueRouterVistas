@@ -1,5 +1,20 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <!-- Reutilizamos el código del componente Titulo.vue
+    y mandamos por props -->
+    <Titulo texto='Página sobre nosotros' />
   </div>
 </template>
+
+<script>
+import Titulo from '../components/Titulo.vue'
+export default {
+  components: {
+    Titulo
+  }
+}
+</script>
+
+<style>
+
+</style>

@@ -1,8 +1,15 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <!-- router-link son los links o enlaces de las vistas-->
+    <!---router link se reenderiza como un ancla <a href="/"></a> -->
+    <router-link to="/">Inicio</router-link> |
+    <router-link to="/about">Sobre nosotros</router-link> |
+    <!--Para pintar nuestra vista en el sitio-->
+    <!--La ruta de /blog debe existir en const routes = {} de index.js-->
+    <router-link to="/blog">Blog</router-link>
   </div>
+  <!--router-view es cuando cambiamos de página se cambia el contenido entonces es
+  dinámico por eso se pone-->
   <router-view/>
 </template>
 
